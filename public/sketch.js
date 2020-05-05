@@ -411,8 +411,8 @@ function frame() {
   stroke(126);
   line(90, 20, 90, 75);
 
-  player1();
-  player2();
+  people1();
+  people2();
   // goal();
   // ----
 }
@@ -587,7 +587,7 @@ function heart(x, y, size) {
   endShape(CLOSE);
 }
 
-function player1() {
+function people1() {
 
   textSize(16);
   fill(0, 102, 153);
@@ -605,7 +605,7 @@ function player1() {
   
 }
 
-function player2() {
+function people2() {
 
   textSize(16);
   fill(0, 102, 153);
