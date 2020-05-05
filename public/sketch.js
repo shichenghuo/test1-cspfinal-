@@ -427,10 +427,10 @@ function draw() {
   pop();
   goal()
   frame();
-  twopeople();
   showgoal();
   rounds();
   wingame();
+  twopeople();
   
 //   if (pose) {
 // // Draw keypoint
