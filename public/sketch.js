@@ -456,13 +456,13 @@ function draw() {
   push();
   image(video, 0, 0, video.width, video.height);
   filter(GRAY);
-  pop();
   goal()
   frame();
   showgoal();
   rounds();
   wingame();
   twopeople();
+  pop();
   
 //   if (pose) {
 // // Draw keypoint
@@ -482,72 +482,6 @@ function draw() {
 // //           ellipse(x, y, 16, 16);
 // //         }
 // // 
-//     if (poses && poses.length >= 2) {
-      
-//       if (poses[0].label == 't' && pose.nose.x >300) {
-//         let s1 = new shape(30, 290, "T", 20);
-//         s1.display();
-//       }
-//       if (poses[0].label == 't' && pose.nose.x < 300) {
-//         let s1 = new shape(490, 290, "T", 20);
-//         s1.display();
-//       }
-      
-//       if (poses[0].label == 'i'&& pose.nose.x > 300) {
-//         let s2 = new shape(30, 290, "I", 20);
-//         s2.display(); 
-//       }
-//       if (poses[0].label == 'i'&& pose.nose.x < 300) {
-//         let s2 = new shape(490, 290, "I", 20);
-//         s2.display();
-//       }
-
-//       if (poses[0].label == 'a' && pose.nose.x > 300) {
-//         let s3 = new shape(30, 290, "A", 20);
-//         s3.display();
-//       }
-//       if (poses[0].label == 'a' && pose.nose.x < 300) {
-//         let s3 = new shape(490, 290, "A", 20);
-//         s3.display();
-//       }
-      
-//       if (poses[0].label == 'o' && pose.nose.x > 300) { 
-//        let s4 = new shape(30, 290, "O", 20);
-//       s4.display();
-//       }
-      
-//       if (poses[0].label == 'o' && pose.nose.x < 300) {
-        
-//         let s4 = new shape(490, 290, "O", 20);
-//         s4.display();
-//       }
-      
-//       if (poses[0].label == 'l' && pose.nose.x > 300) {
-        
-//         let s5 = new shape(30, 290, "L", 20);
-//         s5.display();
-//       }
-      
-//       if (poses[0].label == 'l'&& pose.nose.x < 300) {
-        
-//         let s5 = new shape(490, 290, "L", 20);
-//         s5.display();
-//       }
-      
-//       if (poses[0].label == 'f' && pose.nose.x > 300) {
-//         let s6 = new shape(30, 290, "F", 20);
-//         s6.display();
-//       }
-      
-//       if (poses[0].label == 'f' && pose.nose.x < 300) {
-        
-//         let s6 = new shape(490, 290, "F", 20);
-//         s6.display();
-//       }
-//     }
-//   }
-}
-
 // 
 function showgoal(){
   a[0].display();
