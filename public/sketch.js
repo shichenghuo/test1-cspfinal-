@@ -635,6 +635,16 @@ function wingame(){
 answer1 = a[0];
 answer2 = a[1];
 
+ if (pose) {
+    if (poses && poses.length >= 2) {
+//   for (let i = 0; i < poses.length; i++) {
+  if (myPlayer == 1) {
+    player1 = poses[0];
+    otherPlayerPose = poses[1];
+  } else {
+    player1 = poses[1]
+    otherPlayerPose = poses[0];
+  }
 if (player1.label == answer1){
 player1Match = true;
 }
@@ -648,6 +658,8 @@ j++;
 timeValue=0;
 player1Match = false;
 player2Match = false;
+}
+} 
 }
 
 }
