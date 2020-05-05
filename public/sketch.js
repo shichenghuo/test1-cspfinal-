@@ -655,11 +655,11 @@ player2Match = false;
 function twopeople() {
   for (let i = 0; i < poses.length; i++) {
   if (myPlayer == 1) {
-    player1 = pose[0];
-    otherPlayerPose = pose[1];
+    player1 = poses[0];
+    otherPlayerPose = poses[1];
   } else {
-    player1 = pose[1]
-    otherPlayerPose = pose[0];
+    player1 = poses[1]
+    otherPlayerPose = poses[0];
   }
    if (player1.label == "t") {
       let s1 = new shape(30, 290, "T", 20);
