@@ -42,7 +42,7 @@ let brain;
 // let poseLabel = "Y";
 
 let state = 'waiting';
-let targetLabel;
+var targetLabel;
 let poses;
 
 let goalX=170;
@@ -50,6 +50,11 @@ let goalY=90;
 
 var ontheright;
 var ontheleft;
+
+let player1;
+let player2;
+player1Match = false;
+player2Match = false;
 
 function keyPressed() {
   // if (key == 't') {
@@ -623,4 +628,26 @@ function goal(){
   fill(255);
   rectMode(CORNER)
   rect(goalX, goalY,290,270);
+}
+
+function wingame(){
+
+answer1 = a[0];
+answer2 = a[1];
+
+if (player1.label == answer1){
+player1Match = true;
+}
+
+if (otherPlayerPose.label == answer2){
+player2Match = true;
+}
+
+if (player1Match && player2Match){
+j++;
+timeValue=0;
+player1Match = false;
+player2Match = false;
+}
+
 }
