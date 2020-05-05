@@ -483,6 +483,8 @@ function draw() {
 // //         }
 // // 
 // 
+}
+
 function showgoal(){
   a[0].display();
   a[1].display();
