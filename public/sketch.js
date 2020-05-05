@@ -427,7 +427,7 @@ function draw() {
   pop();
   goal()
   frame();
-  twoplayer();
+  twopeople();
   showgoal();
   rounds();
   wingame();
@@ -652,7 +652,7 @@ player2Match = false;
 
 }
 
-function twoplayer() {
+function twopeople() {
   for (let i = 0; i < poses.length; i++) {
   if (myPlayer == 1) {
     player1 = pose[0];
