@@ -13,7 +13,7 @@ const WebSocketServer = require('websocket').server;
 
 // what web port to listen to? Common values for development systems
 // are 8000, 8080, 5000, 3000, etc. Round numbers greater than 1024.
-const PORT = 8000;
+const PORT = 3000;
 
 // create the server module
 let server = require('http').createServer(async (req, res) => {
