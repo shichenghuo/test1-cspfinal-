@@ -2,6 +2,7 @@ var myPlayer = 1;
 var otherPlayerPose;
 
 function twoplayer() {
+  for (let i = 0; i < poses.length; i++) {
   if (myPlayer == 1) {
     player1 = pose[0];
     otherPlayerPose = pose[1];
@@ -9,9 +10,7 @@ function twoplayer() {
     player1 = pose[1]
     otherPlayerPose = pose[0];
   }
-
-  for (let i = 0; i < poses.length; i++) {
-    if (player1.label == "t") {
+   if (player1.label == "t") {
       let s1 = new shape(30, 290, "T", 20);
       s1.display();
     }
