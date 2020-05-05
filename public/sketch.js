@@ -290,6 +290,37 @@ function setup() {
   };
   brain.load(modelInfo, brainLoaded);
   
+  //show goal(set up goals)
+  goal1.push(new shape(200+ goalblocksize, 80+ goalblocksize,"t",60));
+  goal1.push(new shape(200, 80+ goalblocksize,"a",60));
+  
+  goal2.push(new shape(200, 80 + goalblocksize,"t",60));
+  goal2.push(new shape(200 + 2*goalblocksize, 80 + goalblocksize,"i",60));
+  
+  goal3.push(new shape(200, 80 + goalblocksize,"a",60));
+  goal3.push(new shape(200 + goalblocksize, 80 + goalblocksize,"l",60) );
+  
+  goal4.push(new shape(200, 80,"f",60));
+  goal4.push(new shape(200+ goalblocksize, 80+ goalblocksize,"t",60));
+  
+  goal5.push(new shape(200+ goalblocksize, 80+ goalblocksize,"f",60));
+  goal5.push(new shape(200+ 2*goalblocksize, 80+ goalblocksize,"i",60));
+  
+  goal6.push(new shape(200, 80+ goalblocksize,"l",60) );
+  goal6.push(new shape(200+ 2*goalblocksize, 80+ goalblocksize,"i",60));
+  
+  goal7.push(new shape(200, 80+ 2*goalblocksize,"o",60));
+  goal7.push(new shape(200+ goalblocksize, 80,"f",60) );
+  
+  goal8.push(new shape(200+ goalblocksize, 80,"i",60) );
+  goal8.push(new shape(200+ goalblocksize, 80+ goalblocksize,"o",60) );
+  
+  goal9.push(new shape(200, 80,"l",60) );
+  goal9.push(new shape(200, 80+ 2*goalblocksize,"o",60));
+  
+  goal10.push(new shape(200, 80+goalblocksize,"f",60) );
+  goal10.push(new shape(200+goalblocksize, 80,"l",60));
+  
   // twoplayer setup
   TwoPlayer.onsystem = function(data) {
     if (data.key == "room") {
@@ -311,6 +342,7 @@ function setup() {
       otherPlayerPose = data.pose;
     }
   }
+ 
 }
 
 function brainLoaded() {
@@ -518,41 +550,8 @@ function draw() {
 
 // 
 function showgoal(){
-  
-  goal1.push(new shape(200+ goalblocksize, 80+ goalblocksize,"t",60));
-  goal1.push(new shape(200, 80+ goalblocksize,"a",60));
-  
-  goal2.push(new shape(200, 80 + goalblocksize,"t",60));
-  goal2.push(new shape(200 + 2*goalblocksize, 80 + goalblocksize,"i",60));
-  
-  goal3.push(new shape(200, 80 + goalblocksize,"a",60));
-  goal3.push(new shape(200 + goalblocksize, 80 + goalblocksize,"l",60) );
-  
-  goal4.push(new shape(200, 80,"f",60));
-  goal4.push(new shape(200+ goalblocksize, 80+ goalblocksize,"t",60));
-  
-  goal5.push(new shape(200+ goalblocksize, 80+ goalblocksize,"f",60));
-  goal5.push(new shape(200+ 2*goalblocksize, 80+ goalblocksize,"i",60));
-  
-  goal6.push(new shape(200, 80+ goalblocksize,"l",60) );
-  goal6.push(new shape(200+ 2*goalblocksize, 80+ goalblocksize,"i",60));
-  
-  goal7.push(new shape(200, 80+ 2*goalblocksize,"o",60));
-  goal7.push(new shape(200+ goalblocksize, 80,"f",60) );
-  
-  goal8.push(new shape(200+ goalblocksize, 80,"i",60) );
-  goal8.push(new shape(200+ goalblocksize, 80+ goalblocksize,"o",60) );
-  
-  goal9.push(new shape(200, 80,"l",60) );
-  goal9.push(new shape(200, 80+ 2*goalblocksize,"o",60));
-  
-  goal10.push(new shape(200, 80+goalblocksize,"f",60) );
-  goal10.push(new shape(200+goalblocksize, 80,"l",60));
-  
-  for (let i = 0; i < a.length; i++) {
-    a[i].display();
+    a.display();
   }
-}
 
 function rounds(){
   if (timerValue == 0) {
