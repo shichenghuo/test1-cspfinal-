@@ -232,7 +232,6 @@ class BuildingBackground {
 var myPlayer = 1;
 var otherPlayerPose;
 
-
 function setup() {
   createCanvas(600, 400);
   // ----
@@ -423,91 +422,93 @@ function draw() {
   pop();
   goal()
   frame();
+  twoplayer();
   showgoal();
   rounds();
+  wingame();
   
-  if (pose) {
-// Draw keypoint
-//         for (let i = 0; i < skeleton.length; i++) {
-//           let a = skeleton[i][0];
-//           let b = skeleton[i][1];
-//           strokeWeight(2);
-//           stroke(0);
+//   if (pose) {
+// // Draw keypoint
+// //         for (let i = 0; i < skeleton.length; i++) {
+// //           let a = skeleton[i][0];
+// //           let b = skeleton[i][1];
+// //           strokeWeight(2);
+// //           stroke(0);
 
-//           line(a.position.x, a.position.y, b.position.x, b.position.y);
-//         }
-//         for (let i = 0; i < pose.keypoints.length; i++) {
-//           let x = pose.keypoints[i].position.x;
-//           let y = pose.keypoints[i].position.y;
-//           fill(0);
-//           stroke(255);
-//           ellipse(x, y, 16, 16);
-//         }
-// 
-    if (poses && poses.length >= 2) {
+// //           line(a.position.x, a.position.y, b.position.x, b.position.y);
+// //         }
+// //         for (let i = 0; i < pose.keypoints.length; i++) {
+// //           let x = pose.keypoints[i].position.x;
+// //           let y = pose.keypoints[i].position.y;
+// //           fill(0);
+// //           stroke(255);
+// //           ellipse(x, y, 16, 16);
+// //         }
+// // 
+//     if (poses && poses.length >= 2) {
       
-      if (poses[0].label == 't' && pose.nose.x >300) {
-        let s1 = new shape(30, 290, "T", 20);
-        s1.display();
-      }
-      if (poses[0].label == 't' && pose.nose.x < 300) {
-        let s1 = new shape(490, 290, "T", 20);
-        s1.display();
-      }
+//       if (poses[0].label == 't' && pose.nose.x >300) {
+//         let s1 = new shape(30, 290, "T", 20);
+//         s1.display();
+//       }
+//       if (poses[0].label == 't' && pose.nose.x < 300) {
+//         let s1 = new shape(490, 290, "T", 20);
+//         s1.display();
+//       }
       
-      if (poses[0].label == 'i'&& pose.nose.x > 300) {
-        let s2 = new shape(30, 290, "I", 20);
-        s2.display(); 
-      }
-      if (poses[0].label == 'i'&& pose.nose.x < 300) {
-        let s2 = new shape(490, 290, "I", 20);
-        s2.display();
-      }
+//       if (poses[0].label == 'i'&& pose.nose.x > 300) {
+//         let s2 = new shape(30, 290, "I", 20);
+//         s2.display(); 
+//       }
+//       if (poses[0].label == 'i'&& pose.nose.x < 300) {
+//         let s2 = new shape(490, 290, "I", 20);
+//         s2.display();
+//       }
 
-      if (poses[0].label == 'a' && pose.nose.x > 300) {
-        let s3 = new shape(30, 290, "A", 20);
-        s3.display();
-      }
-      if (poses[0].label == 'a' && pose.nose.x < 300) {
-        let s3 = new shape(490, 290, "A", 20);
-        s3.display();
-      }
+//       if (poses[0].label == 'a' && pose.nose.x > 300) {
+//         let s3 = new shape(30, 290, "A", 20);
+//         s3.display();
+//       }
+//       if (poses[0].label == 'a' && pose.nose.x < 300) {
+//         let s3 = new shape(490, 290, "A", 20);
+//         s3.display();
+//       }
       
-      if (poses[0].label == 'o' && pose.nose.x > 300) { 
-       let s4 = new shape(30, 290, "O", 20);
-      s4.display();
-      }
+//       if (poses[0].label == 'o' && pose.nose.x > 300) { 
+//        let s4 = new shape(30, 290, "O", 20);
+//       s4.display();
+//       }
       
-      if (poses[0].label == 'o' && pose.nose.x < 300) {
+//       if (poses[0].label == 'o' && pose.nose.x < 300) {
         
-        let s4 = new shape(490, 290, "O", 20);
-        s4.display();
-      }
+//         let s4 = new shape(490, 290, "O", 20);
+//         s4.display();
+//       }
       
-      if (poses[0].label == 'l' && pose.nose.x > 300) {
+//       if (poses[0].label == 'l' && pose.nose.x > 300) {
         
-        let s5 = new shape(30, 290, "L", 20);
-        s5.display();
-      }
+//         let s5 = new shape(30, 290, "L", 20);
+//         s5.display();
+//       }
       
-      if (poses[0].label == 'l'&& pose.nose.x < 300) {
+//       if (poses[0].label == 'l'&& pose.nose.x < 300) {
         
-        let s5 = new shape(490, 290, "L", 20);
-        s5.display();
-      }
+//         let s5 = new shape(490, 290, "L", 20);
+//         s5.display();
+//       }
       
-      if (poses[0].label == 'f' && pose.nose.x > 300) {
-        let s6 = new shape(30, 290, "F", 20);
-        s6.display();
-      }
+//       if (poses[0].label == 'f' && pose.nose.x > 300) {
+//         let s6 = new shape(30, 290, "F", 20);
+//         s6.display();
+//       }
       
-      if (poses[0].label == 'f' && pose.nose.x < 300) {
+//       if (poses[0].label == 'f' && pose.nose.x < 300) {
         
-        let s6 = new shape(490, 290, "F", 20);
-        s6.display();
-      }
-    }
-  }
+//         let s6 = new shape(490, 290, "F", 20);
+//         s6.display();
+//       }
+//     }
+//   }
 }
 
 // 
@@ -623,29 +624,3 @@ function goal(){
   rectMode(CORNER)
   rect(goalX, goalY,290,270);
 }
-
-
-// function losepoint{
-
-// }
-
-// function getpoint(){
-  
-// if (poses[0].label == 'a' && goal1){
-//     j++;
-//     }
-// }
-
-
-// function location() {
-  
-//   if (poses.length = 2){
-//   text('You are ready!',300,200);
-//   textSize(20);
-//   fill(255,0,0);
-//   }
-  
-//   if (poses.length < 2){
-//   text('Wait for another person to get in',300,200);
-//   textSize(20);
-//   fll(255,0,0);
