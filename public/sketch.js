@@ -653,7 +653,9 @@ player2Match = false;
 }
 
 function twopeople() {
-  for (let i = 0; i < poses.length; i++) {
+  if (pose) {
+    if (poses && poses.length >= 2) {
+//   for (let i = 0; i < poses.length; i++) {
   if (myPlayer == 1) {
     player1 = poses[0];
     otherPlayerPose = poses[1];
@@ -719,4 +721,5 @@ function twopeople() {
       s6.display();
     }
   }
+}
 }
