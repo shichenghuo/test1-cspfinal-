@@ -550,7 +550,8 @@ function draw() {
 
 // 
 function showgoal(){
-    a.display();
+    goal1.display();
+  print(a);
   }
 
 function rounds(){
