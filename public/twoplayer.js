@@ -2,7 +2,7 @@ var myPlayer = 1;
 var otherPlayerPose;
 
 function twoplayer() {
-  if (myplayer == 1) {
+  if (myPlayer == 1) {
     player1 = pose[0];
     otherPlayerPose = pose[1];
   } else {
