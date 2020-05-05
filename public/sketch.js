@@ -493,9 +493,13 @@ function showgoal(){
 
 function rounds(){
   if (timerValue == 0) {
-  b = b++;
-  a = goalset[b++];
-  timerValue = 10;
+    if(0<b<10){
+      b=b++;
+      a = goalset[b++];
+      timerValue = 10;
+  } 
+    else{
+      b=0;
   }
 }
 
