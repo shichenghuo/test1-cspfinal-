@@ -550,7 +550,8 @@ function draw() {
 
 // 
 function showgoal(){
-    goal1.display();
+  a[0].display();
+  a[1].display();
   print(a);
   }
 
@@ -558,7 +559,6 @@ function rounds(){
   if (timerValue == 0) {
   b = b++;
   a = goalset[b++];
-  print(a);
   timerValue = 10;
   }
 }
