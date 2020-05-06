@@ -43,7 +43,7 @@ let brain;
 
 let state = 'waiting';
 var targetLabel;
-let classifiposes;
+let poses;
 
 let goalX=170;
 let goalY=90;
@@ -607,10 +607,10 @@ player2Match = false;
 
 function twopeople() {
   if (pose) {
-    if (poses && poses.length >= 2) {
+    if (classifiedposes && classifiedposes.length > 0) {
 //   for (let i = 0; i < poses.length; i++) {
   if (myPlayer == 1) {
-    player1 = poses[0];
+    myPlayer = poses[0];
     otherPlayerPose = poses[1];
   } else {
     player1 = poses[1]
