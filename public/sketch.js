@@ -43,7 +43,7 @@ let brain;
 
 let state = 'waiting';
 var targetLabel;
-let poses;
+let classifiposes;
 
 let goalX=170;
 let goalY=90;
